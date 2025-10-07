@@ -1,0 +1,511 @@
+{
+	"categories": [
+		{
+			"id": "js_basics",
+			"name": "JavaScript Basics",
+			"questions": [
+			  {
+				"id": "q1",
+				"question": "console.log(typeof null);",
+				"options": [
+				  "object",
+				  "null",
+				  "undefined",
+				  "number"
+				],
+				"correctAnswer": "A",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q2",
+				"question": "Which company developed JavaScript?",
+				"options": [
+				  "Microsoft",
+				  "Netscape",
+				  "Google",
+				  "Mozilla"
+				],
+				"correctAnswer": "B",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q3",
+				"question": "Inside which HTML element do we put the JavaScript?",
+				"options": [
+				  "<script>",
+				  "<js>",
+				  "<javascript>",
+				  "<scripting>"
+				],
+				"correctAnswer": "A",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q4",
+				"question": "What is the correct way to write a JavaScript array?",
+				"options": [
+				  "var colors = [\"red\", \"green\", \"blue\"]",
+				  "var colors = (\"red\", \"green\", \"blue\")",
+				  "var colors = \"red\", \"green\", \"blue\"",
+				  "var colors = {\"red\", \"green\", \"blue\"}"
+				],
+				"correctAnswer": "A",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q5",
+				"question": "How do you create a function in JavaScript?",
+				"options": [
+				  "function myFunction()",
+				  "function:myFunction()",
+				  "function = myFunction()",
+				  "create function myFunction()"
+				],
+				"correctAnswer": "A",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q6",
+				"question": "How to write an IF statement in JavaScript?",
+				"options": [
+				  "if i == 5 then",
+				  "if (i == 5)",
+				  "if i = 5",
+				  "if i = 5 then"
+				],
+				"correctAnswer": "B",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q7",
+				"question": "Which operator is used to assign a value to a variable?",
+				"options": [
+				  "*",
+				  "-",
+				  "=",
+				  "x"
+				],
+				"correctAnswer": "C",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q8",
+				"question": "How can you add a comment in a JavaScript?",
+				"options": [
+				  "<!-- This is a comment -->",
+				  "// This is a comment",
+				  "'' This is a comment",
+				  "## This is a comment"
+				],
+				"correctAnswer": "B",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q9",
+				"question": "What is the correct way to write a JavaScript array?",
+				"options": [
+				  "var colors = 1 = (\"red\", \"green\", \"blue\")",
+				  "var colors = [\"red\", \"green\", \"blue\"]",
+				  "var colors = (\"red\", \"green\", \"blue\")",
+				  "var colors = \"red\", \"green\", \"blue\""
+				],
+				"correctAnswer": "B",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q10",
+				"question": "How does a WHILE loop start?",
+				"options": [
+				  "while (i <= 10; i++)",
+				  "while i = 1 to 10",
+				  "while (i <= 10)",
+				  "while (i++ <= 10)"
+				],
+				"correctAnswer": "C",
+				"timeLimit": 10
+			  }
+			]
+		  },
+		  {
+			"id": "angular_basic",
+			"name": "Angular Basics",
+			"questions": [
+			  {
+				"id": "q1",
+				"question": "Which directive is used to create a two-way binding in Angular?",
+				"options": [
+				  "*ngIf",
+				  "[ngModel]",
+				  "[(ngModel)]",
+				  "*ngFor"
+				],
+				"correctAnswer": "C",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q2",
+				"question": "Which Angular file typically defines metadata about a component?",
+				"options": [
+				  "component.ts",
+				  "component.html",
+				  "component.css",
+				  "component.decorator.ts"
+				],
+				"correctAnswer": "A",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q3",
+				"question": "What is the purpose of the @Injectable decorator in Angular?",
+				"options": [
+				  "Declares a component",
+				  "Declares a service that can be injected",
+				  "Declares a pipe",
+				  "Declares a module"
+				],
+				"correctAnswer": "B",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q4",
+				"question": "Which module is the root module in an Angular application?",
+				"options": [
+				  "AppModule",
+				  "CoreModule",
+				  "BrowserModule",
+				  "MainModule"
+				],
+				"correctAnswer": "A",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q5",
+				"question": "How do you handle events in Angular templates?",
+				"options": [
+				  "Using (event)",
+				  "Using [event]",
+				  "Using {event}",
+				  "Using #event"
+				],
+				"correctAnswer": "A",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q6",
+				"question": "Which lifecycle hook is called after Angular has initialized all data-bound properties?",
+				"options": [
+				  "ngOnInit",
+				  "ngAfterContentInit",
+				  "ngOnDestroy",
+				  "ngDoCheck"
+				],
+				"correctAnswer": "A",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q7",
+				"question": "What symbol is used to bind data for interpolation in Angular templates?",
+				"options": [
+				  "[]",
+				  "()",
+				  "{{ }}",
+				  "##"
+				],
+				"correctAnswer": "C",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q8",
+				"question": "Which service is primarily used for routing in Angular?",
+				"options": [
+				  "RouteService",
+				  "RouterModule",
+				  "RoutingService",
+				  "RouterLink"
+				],
+				"correctAnswer": "B",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q9",
+				"question": "What is the Angular CLI command to create a new project?",
+				"options": [
+				  "ng create",
+				  "ng new",
+				  "ng generate",
+				  "ng init"
+				],
+				"correctAnswer": "B",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q10",
+				"question": "How do you include a child component selector in a parent template?",
+				"options": [
+				  "Using the tag name of the child component",
+				  "Using #childComponent",
+				  "Using <component></component>",
+				  "Using {childComponent}"
+				],
+				"correctAnswer": "A",
+				"timeLimit": 10
+			  }
+			]
+		  },		  
+		  {
+			"id": "react_basics",
+			"name": "React Basics",
+			"questions": [
+			  {
+				"id": "q1",
+				"question": "What hook is used to add state in React functional components?",
+				"options": [
+				  "useState",
+				  "useEffect",
+				  "useContext",
+				  "useRef"
+				],
+				"correctAnswer": "A",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q2",
+				"question": "Which method is used to render React elements into the DOM?",
+				"options": [
+				  "React.render()",
+				  "ReactDOM.render()",
+				  "renderDOM()",
+				  "DOM.render()"
+				],
+				"correctAnswer": "B",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q3",
+				"question": "What is JSX?",
+				"options": [
+				  "A Javascript extension that allows mixing HTML with JavaScript",
+				  "A CSS framework",
+				  "A database",
+				  "A JavaScript library"
+				],
+				"correctAnswer": "A",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q4",
+				"question": "How can you pass data from a parent component to a child component?",
+				"options": [
+				  "Using state",
+				  "Using props",
+				  "Using lifecycle methods",
+				  "Using Redux"
+				],
+				"correctAnswer": "B",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q5",
+				"question": "Which hook runs side effects in React components?",
+				"options": [
+				  "useState",
+				  "useEffect",
+				  "useMemo",
+				  "useContext"
+				],
+				"correctAnswer": "B",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q6",
+				"question": "What is the purpose of keys in React lists?",
+				"options": [
+				  "To uniquely identify elements for efficient rendering",
+				  "To give a name to elements",
+				  "To style elements",
+				  "To add functionality to elements"
+				],
+				"correctAnswer": "A",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q7",
+				"question": "How do you create a React component?",
+				"options": [
+				  "By writing a function that returns JSX",
+				  "By writing a CSS file",
+				  "By creating an HTML element",
+				  "By using SQL queries"
+				],
+				"correctAnswer": "A",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q8",
+				"question": "Which lifecycle method is called after a component is rendered the first time?",
+				"options": [
+				  "componentWillMount",
+				  "componentDidMount",
+				  "render",
+				  "componentWillUpdate"
+				],
+				"correctAnswer": "B",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q9",
+				"question": "What is the virtual DOM?",
+				"options": [
+				  "A copy of the real DOM kept in memory",
+				  "The browser's actual DOM",
+				  "A new feature of CSS",
+				  "A type of database"
+				],
+				"correctAnswer": "A",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q10",
+				"question": "How do you handle events in React?",
+				"options": [
+				  "Using HTML event attributes",
+				  "Using camelCase event handler props",
+				  "Using jQuery",
+				  "React doesn't support events"
+				],
+				"correctAnswer": "B",
+				"timeLimit": 10
+			  }
+			]
+		  },		  
+		  {
+			"id": "flutter",
+			"name": "Flutter Basics",
+			"questions": [
+			  {
+				"id": "q1",
+				"question": "Which language is used to develop Flutter apps?",
+				"options": [
+				  "Java",
+				  "Kotlin",
+				  "Dart",
+				  "Swift"
+				],
+				"correctAnswer": "C",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q2",
+				"question": "What widget is used for creating a button in Flutter?",
+				"options": [
+				  "ElevatedButton",
+				  "ButtonWidget",
+				  "FlatButton",
+				  "ClickButton"
+				],
+				"correctAnswer": "A",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q3",
+				"question": "Which method is used to create stateful widgets in Flutter?",
+				"options": [
+				  "StatelessWidget",
+				  "StatefulWidget",
+				  "DynamicWidget",
+				  "InheritedWidget"
+				],
+				"correctAnswer": "B",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q4",
+				"question": "What is the layout widget that arranges children in a vertical column?",
+				"options": [
+				  "Row",
+				  "Grid",
+				  "Column",
+				  "Stack"
+				],
+				"correctAnswer": "C",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q5",
+				"question": "How do you add external packages in Flutter?",
+				"options": [
+				  "Using pubspec.yaml",
+				  "Using package.json",
+				  "Using build.gradle",
+				  "Using npm"
+				],
+				"correctAnswer": "A",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q6",
+				"question": "Which widget allows scrolling in Flutter?",
+				"options": [
+				  "ScrollView",
+				  "ScrollableWidget",
+				  "SingleChildScrollView",
+				  "ScrollContainer"
+				],
+				"correctAnswer": "C",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q7",
+				"question": "What command runs Flutter apps on connected devices?",
+				"options": [
+				  "flutter run",
+				  "flutter start",
+				  "flutter build",
+				  "flutter launch"
+				],
+				"correctAnswer": "A",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q8",
+				"question": "What widget is typically used as the app’s root widget in Flutter?",
+				"options": [
+				  "MaterialApp",
+				  "RootWidget",
+				  "Scaffold",
+				  "AppRoot"
+				],
+				"correctAnswer": "A",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q9",
+				"question": "Which widget is used to create a rectangular area to hold a single child?",
+				"options": [
+				  "Container",
+				  "Box",
+				  "Card",
+				  "Panel"
+				],
+				"correctAnswer": "A",
+				"timeLimit": 10
+			  },
+			  {
+				"id": "q10",
+				"question": "Flutter uses which rendering engine?",
+				"options": [
+				  "WebKit",
+				  "Skia",
+				  "Blink",
+				  "Gecko"
+				],
+				"correctAnswer": "B",
+				"timeLimit": 10
+			  }
+			]
+		  }
+		  
+		  
+	]
+  }
+  

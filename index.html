@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>QuizMania</title>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+		<div class="q-wrapper-header">
+			<header>
+				<img src="quizemania.png" alt="QuizMania" width="144">
+			</header>
+		</div>
+        <div class="q-wrapper">
+            <section>
+                <div id="overlay"></div>
+                <div id="rules-modal" class="modal">
+                    <h2>Quiz rules</h2>
+                    <a id="close-rules">
+                        <span>X</span>
+                    </a>
+                    <p class="q-rules-heading">
+                        <b>10-Second Timer:</b>
+                    </p>
+                    <ul>
+                        <li>Each question comes with a 10-second time</li>
+                        <li>If you don’t answer within the time limit, the app will automatically move to the next question.</li>
+                    </ul>
+                    <p class="q-rules-heading">
+                        <b>Manual Navigation</b>
+                    </p>
+                    <ul>
+                        <li>You can navigate to the next question manually before the timer expires.</li>
+                        <li>Use the "Next" button to move ahead if you’re ready before the timer runs out.</li>
+                    </ul>
+                    <p class="q-rules-heading">
+                        <b>Final Score and Performance Message:</b>
+                    </p>
+                    <ul>
+                        <li>After all questions are answered, your final score will be displayed.</li>
+                        <li>Based on your performance, you will receive a personalized message:</li>
+                        <ul>
+                            <li>
+                                Great job!: If you score
+                                <b>above 80%.</b>
+                            </li>
+                            <li>
+                                Well done!: If you score
+                                <b>between 60% and 80%.</b>
+                            </li>
+                            <li>
+                                Keep practicing!: If you score
+                                <b>below 60%.</b>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+                <div id="welcome-screen" class="screen active">
+                    <h1>
+                        Welcome to <span>QuizMania</span>
+                    </h1>
+                    <p class="quize-rules">
+                        Please read all the rules about this quiz before you start <br>
+                        <a href="#" id="show-rules">Quiz rules</a>
+                    </p>
+                    <form id="start-form">
+                        <label for="username">Full name:</label>
+                        <input
+                            type="text" name="username" id="username" placeholder="Full name" required >
+                        <p class="q-subheading">Please select topic to continue</p>
+                        <div id="category-list">
+                            <label>
+                                <input type="radio" name="category" value="js_basics">
+                                <span>Javascript Basic</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="category" value="angular_basic">
+                                <span>Angular Basic</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="category" value="react_advance">
+                                <span>React.js Advance</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="category" value="flutter">
+                                <span>Flutter</span>
+                            </label>
+                        </div>
+                        <button type="submit" id="start-quiz-btn" disabled>Start Quiz</button>
+                    </form>
+                </div>
+                <div id="quiz-screen" class="screen">
+                    <div id="progress-bar"></div>
+                    <div id="timer">0:10</div>
+                    <div id="question-area"></div>
+                    <div id="answers-list"></div>
+                    <div class="btn-group">
+                        <button id="next-question" disabled>Next</button>
+                        <a id="skip-question">Skip this question</a>
+                    </div>
+                </div>
+                <div id="result-screen" class="screen">
+                    <h2>You successfully completed the Quiz</h2>
+                    <p id="score-details"></p>
+                    <p id="score-message"></p>
+                </div>
+            </section>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
