@@ -131,25 +131,30 @@ function loadQuestion() {
 
 
 function selectAnswer(idx) {
-	if (answered) return;
-	answered = true;
-	clearInterval(timer);
-  
-	const category = quizData.categories.find(c => c.id === selectedCategory);
-	const q = category.questions[current];
-	const correctIndex = q.correctAnswer.charCodeAt(0) - 65;
-  
-	const labels = answersList.querySelectorAll('label');
-	labels.forEach((label, i) => {
-	  label.classList.remove('answer-correct', 'answer-incorrect');
-	  if (i === idx) {
-		label.classList.add(idx === correctIndex ? 'answer-correct' : 'answer-incorrect');
-	  }
-	  // Optionally disable radio inputs:
-	  label.querySelector('input[type="radio"]').disabled = true;
-	});
-	nextQuestionBtn.disabled = false;
-  }
+    if (answered) return;
+    answered = true;
+    clearInterval(timer);
+
+    const category = quizData.categories.find(c => c.id === selectedCategory);
+    const q = category.questions[current];
+    const correctIndex = q.correctAnswer.charCodeAt(0) - 65;
+
+    // Add scoring here:
+    if (idx === correctIndex) {
+        score++;
+    }
+
+    const labels = answersList.querySelectorAll('label');
+    labels.forEach((label, i) => {
+        label.classList.remove('answer-correct', 'answer-incorrect');
+        if (i === idx) {
+            label.classList.add(idx === correctIndex ? 'answer-correct' : 'answer-incorrect');
+        }
+        label.querySelector('input[type="radio"]').disabled = true;
+    });
+    nextQuestionBtn.disabled = false;
+}
+
   
 
 function highlightCorrectAnswer() {
@@ -174,16 +179,22 @@ nextQuestionBtn.onclick = () => {
 };
 
 skipQuestionBtn.onclick = () => {
-	clearInterval(timer);
-	unanswered++;
-	const category = quizData.categories.find(c => c.id === selectedCategory);
-	if (current + 1 < category.questions.length) {
-		current++;
-		loadQuestion();
-	} else {
-		showResult();
-	}
+
+    if (answered) return;
+    clearInterval(timer);
+    unanswered++;
+    answered = true;
+    const category = quizData.categories.find(c => c.id === selectedCategory);
+    if (current + 1 < category.questions.length) {
+        current++;
+        loadQuestion();
+    } else {
+        showResult();
+    }
 };
+
+
+
 
 nextQuestionBtn.onclick = () => {
 	const category = quizData.categories.find(c => c.id === selectedCategory);
@@ -192,25 +203,6 @@ nextQuestionBtn.onclick = () => {
 		loadQuestion();
 	} else {
 		showResult();
-	}
-};
-
-skipQuestionBtn.onclick = () => {
-	if (!answered) {
-		clearInterval(timer);
-		unanswered++;
-		highlightCorrectAnswer();
-		nextQuestionBtn.disabled = false;
-		answered = true;
-	} else {
-		const category = quizData.categories.find(c => c.id === selectedCategory);
-		if (current + 1 < category.questions.length) {
-			current++;
-			loadQuestion();
-			answered = false;
-		} else {
-			showResult();
-		}
 	}
 };
 
