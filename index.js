@@ -207,14 +207,29 @@ nextQuestionBtn.onclick = () => {
 };
 
 function showResult() {
-	showScreen('result');
-	const category = quizData.categories.find(c => c.id === selectedCategory);
-	const percent = Math.round((score / category.questions.length) * 100);
-	let message = "Great job!";
-	if (percent < 60) message = "Keep practicing!";
-	else if (percent < 80) message = "Well done!";
-	scoreDetails.textContent = `Correct: ${score}, Unanswered: ${unanswered}, Total: ${category.questions.length}`;
-	scoreMessage.textContent = message;
+    showScreen('result');
+    const category = quizData.categories.find(c => c.id === selectedCategory);
+    const total = category.questions.length;
+    const percent = Math.round((score / total) * 100);
+    const incorrect = total - score - unanswered;
+    // Feedback message
+    scoreMessage.textContent = percent >= 80 ? "Great job!" : percent >= 60 ? "Well done!" : "Keep practicing!";
+    // Result layout
+    scoreDetails.innerHTML = `
+      <div class="score-circle">
+        <div class="score-label">Your Score</div>
+        <div class="score-percent">${percent}%</div>
+      </div>
+      <div class="score-breakdown">
+        <div class="score-questions-text">Out of ${total} question</div>
+        <div class="score-summary">
+          <span class="score-correct">${score} Correct</span>
+          <span class="score-incorrect">${incorrect} Incorrect</span>
+          <span class="score-unanswered">${unanswered} Not answered</span>
+        </div>
+      </div>
+      <button class="score-retake" onclick="window.location.reload()">Retake Quiz</button>
+    `;
 }
 
 const showRulesBtn = document.getElementById('show-rules');
@@ -232,4 +247,3 @@ closeRulesBtn.onclick = function () {
 	overlay.style.display = 'none';
 	rulesModal.style.display = 'none';
 };
-
